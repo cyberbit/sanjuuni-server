@@ -28,7 +28,7 @@ def build_sanjuuni(src: str, out: str, *,
     if dithering not in ["threshold","ordered","lab-color","octree","kmeans","none"]:
       raise ValueError("dithering not in threshold, ordered, lab-color, octree, kmeans, none")
     if output not in ["bimg","nfp"]:
-      raise ValueError("dithering not in bimg, nfp")
+      raise ValueError("output not in bimg, nfp")
     
     builder = "sanjuuni {fmt} {dither} {pal} {h} {w} {b} {palette} --input {src} -o {out}"
     dither = ({
